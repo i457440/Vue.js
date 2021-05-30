@@ -11,7 +11,7 @@
         },
         methods: {
           calculateSectionOffsets() {
-            let sections = document.getElementsByTagName('section');
+            let sections = document.getElementsByTagName('div');
             let length = sections.length;
             
             for(let i = 0; i < length; i++) {
@@ -62,7 +62,7 @@
             this.activeSection = id;
             this.inMove = true;
             
-            document.getElementsByTagName('section')[id].scrollIntoView({behavior: 'smooth'});
+            document.getElementsByTagName('div')[id].scrollIntoView({behavior: 'smooth'});
             
             setTimeout(() => {
               this.inMove = false;
